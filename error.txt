@@ -1,0 +1,57 @@
+Exception in callback AbstractEventLoop.add_reader(1416, <function Cli...001F6FFD607C0>)
+handle: <Handle AbstractEventLoop.add_reader(1416, <function Cli...001F6FFD607C0>)>
+Traceback (most recent call last):
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\asyncio\events.py", line 84, in _run
+    self._context.run(self._callback, *self._args)
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\asyncio\events.py", line 534, in add_reader
+    raise NotImplementedError
+NotImplementedError
+Exception in callback AbstractEventLoop.add_writer(<paho.mqtt.cl...001F6FF2DA450>, <function Cli...001F6FFD609A0>)
+handle: <Handle AbstractEventLoop.add_writer(<paho.mqtt.cl...001F6FF2DA450>, <function Cli...001F6FFD609A0>)>
+Traceback (most recent call last):
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\asyncio\events.py", line 84, in _run
+    self._context.run(self._callback, *self._args)
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\asyncio\events.py", line 540, in add_writer
+    raise NotImplementedError
+NotImplementedError
+Traceback (most recent call last):
+  File "C:\Users\bfurm\Desktop\elo-4-Plus\elo-4-Plus\test-schedule.py", line 17, in <module>
+    asyncio.run(main())
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\asyncio\runners.py", line 190, in run
+    return runner.run(main)
+           ^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\asyncio\runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\asyncio\base_events.py", line 654, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\bfurm\Desktop\elo-4-Plus\elo-4-Plus\test-schedule.py", line 15, in main
+    await bot.listen()
+  File "C:\Users\bfurm\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\fbchat_muqit\n_client.py", line 1873, in listen
+    await self.startListening()
+  File "C:\Users\bfurm\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\fbchat_muqit\n_client.py", line 1842, in startListening
+    self._mqtt = await Mqtt.connect(
+                 ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\bfurm\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\fbchat_muqit\muqit.py", line 54, in connect
+    await mqttClint.__aenter__()
+  File "C:\Users\bfurm\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\aiomqtt\client.py", line 731, in __aenter__
+    await self._wait_for(self._connected, timeout=None)
+  File "C:\Users\bfurm\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\aiomqtt\client.py", line 502, in _wait_for
+    raise MqttError(msg) from None
+aiomqtt.exceptions.MqttError: Operation timed out
+Caught exception in on_socket_unregister_write: 
+Exception ignored in: <function Client.__del__ at 0x000001F6FFD0A160>
+Traceback (most recent call last):
+  File "C:\Users\bfurm\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\paho\mqtt\client.py", line 880, in __del__
+  File "C:\Users\bfurm\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\paho\mqtt\client.py", line 1139, in _reset_sockets
+  File "C:\Users\bfurm\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\paho\mqtt\client.py", line 1131, in _sock_close
+  File "C:\Users\bfurm\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\paho\mqtt\client.py", line 2976, in _call_socket_unregister_write
+  File "C:\Users\bfurm\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\aiomqtt\client.py", line 697, in _on_socket_unregister_write
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\asyncio\events.py", line 543, in remove_writer
+NotImplementedError: 
+Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x000001F6FEF2C190>
+Unclosed connector
+connections: ['deque([(<aiohttp.client_proto.ResponseHandler object at 0x000001F6FFD014E0>, 9216.515)])']
+connector: <aiohttp.connector.TCPConnector object at 0x000001F6FF83A390>
