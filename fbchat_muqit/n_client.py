@@ -936,7 +936,7 @@ class Client:
         thread_type=ThreadType.USER,
         is_gif=False,
     ):
-        """Deprecated. Don't use it use sendLocalFiles()"""
+        """Deprecated. Use `sendLocalFiles()` instead."""
         if is_gif:
             mimetype = "image/gif"
         else:
